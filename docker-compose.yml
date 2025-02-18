@@ -1,0 +1,5 @@
+version: '1.0'
+include:
+  - 'docker-compose/docker-compose.base.yml'
+  - 'docker-compose/docker-compose.${ENV:-dev}.yml'
+

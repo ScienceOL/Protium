@@ -1,0 +1,158 @@
+{
+  // Global settings
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  // Python settings
+
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true,
+
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit", // 自动整理导入
+      "source.unusedImports": "explicit" // 删除未使用的导入
+    }
+  },
+
+  // Pylance 检查代码服务：代码类型、自动补全、错误检查
+  "python.languageServer": "Pylance",
+  "python.analysis.addImport.exactMatchOnly": true,
+  "python.analysis.typeCheckingMode": "standard",
+
+  // Black 格式化代码风格：代码自动格式化，一般和 Flake 8 联用
+  "black-formatter.args": ["--line-length", "119"],
+
+  // Flake8 检查代码风格：语法错误、代码规范
+  "flake8.args": ["--max-line-length", "119", "--ignore", "F401 W503"], // F401: unused import, W503: line break before binary operator
+
+  // TypeScript settings
+  "prettier.semi": true,
+  "prettier.singleQuote": true,
+  "tailwind-fold.autoFold": true,
+  "tailwind-fold.foldLengthThreshold": 0,
+  "tailwind-fold.unfoldIfLineSelected": false,
+  "tailwind-fold.unfoldedTextOpacity": 0.7,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
+  },
+  "[css]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "eslint.format.enable": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "html",
+    "vue",
+    "typescript",
+    "typescriptreact"
+  ],
+
+  "files.associations": {
+    "*.env.development": "env",
+    "*.env.production": "env"
+  },
+
+  // 注释标记
+  "todo-tree.highlights.defaultHighlight": {
+    "icon": "alert",
+    "type": "text",
+    "foreground": "#9efff4",
+    "opacity": 100,
+    "iconColour": "#ffca56"
+  },
+  "todo-tree.highlights.customHighlight": {
+    "TODO": {
+      "icon": "check",
+      "type": "tag-and-comment",
+      "foreground": "#8356ff",
+      "background": "#fffacd"
+    },
+    "FIXME": {
+      "foreground": "#ff0000",
+      "iconColour": "#00ff00",
+      "type": "text",
+      "gutterIcon": true
+    },
+    "BUG": {
+      "foreground": "#ff0000",
+      "type": "tag",
+      "gutterIcon": true
+    },
+    "CASE": {
+      "foreground": "#ffdd00",
+      "fontWeight": "bold",
+      "type": "tag-and-comment",
+      "gutterIcon": true
+    },
+    "END": {
+      "foreground": "#9efff4",
+      "fontWeight": "bold",
+      "type": "tag"
+    },
+    "EXPLAIN:": {
+      "foreground": "#9efff4",
+      "fontWeight": "bold",
+      "fontStyle": "italic",
+      "type": "tag"
+    },
+    "NOTE": {
+      "foreground": "#50ffb9",
+      "fontWeight": "bold",
+      "fontStyle": "italic",
+      "type": "tag"
+    },
+    "WRONG": {
+      "foreground": "#fd6b3e",
+      "type": "tag-and-comment",
+      "gutterIcon": true
+    },
+    "WARNING": {
+      "foreground": "#fd6b3e",
+      "type": "tag-and-comment",
+      "gutterIcon": true
+    }
+  },
+  "todo-tree.general.tags": [
+    "BUG",
+    "WARNING",
+    "WRONG:",
+    "FIXME",
+    "TODO",
+    "CASE",
+    "END",
+    "EXPLAIN:",
+    "NOTE:",
+    "[x]"
+  ]
+}
