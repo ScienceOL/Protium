@@ -1,0 +1,7 @@
+services:
+  protium:
+    env_file:
+      - .env.dev
+    volumes:
+      - ../:/app
+    command: ["pnpm", "dev"]

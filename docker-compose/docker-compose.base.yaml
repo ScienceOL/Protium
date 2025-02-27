@@ -1,0 +1,26 @@
+services:
+  # network-service:
+  #   image: alpine
+  #   container_name: sciol-network
+  #   ports:
+  #     - '${PROTIUM_PORT}:${PROTIUM_PORT}' # MinIO API
+  #   command: tail -f /dev/null
+  #   networks:
+  #     - sciol-network
+
+  protium:
+    image: registry.cn-shanghai.aliyuncs.com/scienceol/protium:latest
+    restart: unless-stopped
+    container_name: sciol-protium
+    build:
+      context: ../
+      platforms:
+        - linux/amd64
+        - linux/arm64
+      dockerfile: Dockerfile
+    ports:
+      - '32234:32234'
+
+# networks:
+#   sciol-network:
+#     driver: bridge
